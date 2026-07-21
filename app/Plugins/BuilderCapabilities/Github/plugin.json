@@ -1,0 +1,17 @@
+{
+    "name": "GitHub",
+    "slug": "github",
+    "description": "Connect projects to GitHub repositories for auto-push and version control",
+    "version": "1.0.0",
+    "author": "Titan Systems",
+    "author_url": "https://titansys.dev",
+    "type": "builder_capability",
+    "icon": "Github",
+    "main_class": "src/GithubPlugin.php",
+    "namespace": "App\\Plugins\\BuilderCapabilities\\GithubPlugin",
+    "requirements": {
+        "php": ">=8.2",
+        "laravel": ">=11.0"
+    },
+    "migrations": []
+}

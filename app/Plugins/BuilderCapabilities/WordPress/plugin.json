@@ -1,0 +1,17 @@
+{
+    "name": "WordPress",
+    "slug": "wordpress",
+    "description": "Generate installable WordPress block themes from AI builds",
+    "version": "1.0.0",
+    "author": "Titan Systems",
+    "author_url": "https://titansys.dev",
+    "type": "builder_capability",
+    "icon": "FileCode",
+    "main_class": "src/WordPressPlugin.php",
+    "namespace": "App\\Plugins\\BuilderCapabilities\\WordPressPlugin",
+    "requirements": {
+        "php": ">=8.2",
+        "laravel": ">=11.0"
+    },
+    "migrations": []
+}

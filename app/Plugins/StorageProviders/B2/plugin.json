@@ -1,0 +1,17 @@
+{
+    "name": "Backblaze B2",
+    "slug": "backblaze-b2",
+    "description": "Cloud storage via Backblaze B2 S3-compatible API. Store project files securely and affordably.",
+    "version": "1.0.0",
+    "author": "Titan Systems",
+    "author_url": "https://titansys.dev",
+    "type": "storage_provider",
+    "icon": "HardDrive",
+    "main_class": "src/B2Plugin.php",
+    "namespace": "App\\Plugins\\StorageProviders\\B2",
+    "requirements": {
+        "php": ">=8.2",
+        "laravel": ">=11.0"
+    },
+    "migrations": []
+}

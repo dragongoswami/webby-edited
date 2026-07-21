@@ -1,0 +1,375 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "./themes.css";
+
+/* Plugins - use @plugin directive in v4 */
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/container-queries";
+
+/* Source paths for class detection (replaces content array) */
+@source "../js/**/*.tsx";
+@source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
+@source "../../resources/views/**/*.blade.php";
+
+/* Global base styles - outside @layer in v4 */
+* {
+  border-color: var(--border);
+}
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Custom keyframes */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes typingDot {
+  0%, 60%, 100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  30% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+
+@keyframes rainbow-wave {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes rainbow-hue {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.2);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.15);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-rtl {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+@keyframes collapsible-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-collapsible-content-height);
+  }
+}
+
+@keyframes collapsible-up {
+  from {
+    height: var(--radix-collapsible-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+/* Custom utilities - use @utility directive in v4 */
+@utility shimmer-animation {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(var(--primary-rgb, 59, 130, 246), 0.1) 50%,
+    transparent 100%
+  );
+  animation: shimmer 2s infinite;
+}
+
+@utility animate-blob {
+  animation: blob 10s infinite ease-in-out;
+}
+
+@utility animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+@utility animation-delay-3000 {
+  animation-delay: 3s;
+}
+
+@utility animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+@utility animation-delay-5000 {
+  animation-delay: 5s;
+}
+
+@utility scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Thin, theme-aware scrollbar that mirrors the Radix ScrollArea thumb
+   (border-colored, pill-shaped) for scroll regions where ScrollArea's
+   definite-height requirement doesn't fit (e.g. max-height dropdowns). */
+@utility scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--border);
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    border-radius: 9999px;
+  }
+}
+
+@utility animate-fade-in {
+  animation: fadeIn 0.2s ease-out;
+}
+
+@utility animate-rainbow {
+  background: linear-gradient(
+    90deg,
+    #f97316,
+    #eab308,
+    #22c55e,
+    #06b6d4,
+    #3b82f6,
+    #8b5cf6,
+    #ec4899,
+    #f97316
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow-wave 2s linear infinite;
+}
+
+@utility animate-rainbow-icon {
+  color: #3b82f6;
+  animation: rainbow-hue 2s linear infinite, heartbeat 1.5s ease-in-out infinite;
+}
+
+@utility typing-dot {
+  animation: typingDot 1.4s infinite ease-in-out;
+}
+
+@utility animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+@utility animate-marquee-slow {
+  animation: marquee 30s linear infinite;
+}
+
+@utility animate-marquee-rtl {
+  animation: marquee-rtl 20s linear infinite;
+}
+
+@utility animate-marquee-rtl-slow {
+  animation: marquee-rtl 30s linear infinite;
+}
+
+@utility animate-collapsible-down {
+  animation: collapsible-down 0.2s ease-out;
+}
+
+@utility animate-collapsible-up {
+  animation: collapsible-up 0.2s ease-out;
+}
+
+/* Typing dot delays - plain CSS classes */
+.typing-dot:nth-child(1) {
+  animation-delay: 0s;
+}
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Offset in-page anchor scrolling (e.g. the landing navbar's #features /
+   #pricing links) so targets clear the fixed h-16 navbar instead of landing
+   under it. Landing raises this while the demo purchase bar is visible. */
+html {
+  scroll-padding-top: 4rem;
+}
+
+/* Impersonation banner: offset fixed sidebar and sticky headers */
+html[data-impersonating] div:has(> [data-sidebar="sidebar"]) {
+  top: var(--impersonation-banner-height, 0px) !important;
+  height: calc(100svh - var(--impersonation-banner-height, 0px)) !important;
+}
+html[data-impersonating] header.sticky {
+  top: var(--impersonation-banner-height, 0px) !important;
+}
+
+/* TipTap empty-state placeholder for the ticket rich-text editor.
+   The Placeholder extension adds .is-editor-empty to the first empty
+   node and sets data-placeholder. We render that text as a pseudo
+   element so it's visible without requiring users to focus first. */
+.tiptap p.is-editor-empty:first-child::before,
+.ProseMirror p.is-editor-empty:first-child::before {
+    content: attr(data-placeholder);
+    color: var(--muted-foreground);
+    float: inline-start;
+    height: 0;
+    pointer-events: none;
+}
+
+/* ---------------------------------------------------------------------------
+   Prism syntax highlighting (.code-highlight) — used by the API docs code
+   blocks. Light/dark values tuned to sit on bg-muted in all color themes.
+--------------------------------------------------------------------------- */
+.code-highlight .token.comment,
+.code-highlight .token.prolog,
+.code-highlight .token.cdata {
+    color: var(--muted-foreground);
+    font-style: italic;
+}
+
+.code-highlight .token.punctuation,
+.code-highlight .token.operator {
+    color: var(--muted-foreground);
+}
+
+.code-highlight .token.string,
+.code-highlight .token.attr-value,
+.code-highlight .token.template-string {
+    color: #15803d;
+}
+
+.code-highlight .token.keyword,
+.code-highlight .token.boolean,
+.code-highlight .token.constant,
+.code-highlight .token.delimiter,
+.code-highlight .token.important {
+    color: #7c3aed;
+}
+
+.code-highlight .token.function,
+.code-highlight .token.function-name,
+.code-highlight .token.method {
+    color: #2563eb;
+}
+
+.code-highlight .token.number {
+    color: #b45309;
+}
+
+.code-highlight .token.property,
+.code-highlight .token.variable,
+.code-highlight .token.parameter,
+.code-highlight .token.class-name {
+    color: #0e7490;
+}
+
+.dark .code-highlight .token.string,
+.dark .code-highlight .token.attr-value,
+.dark .code-highlight .token.template-string {
+    color: #86efac;
+}
+
+.dark .code-highlight .token.keyword,
+.dark .code-highlight .token.boolean,
+.dark .code-highlight .token.constant,
+.dark .code-highlight .token.delimiter,
+.dark .code-highlight .token.important {
+    color: #c4b5fd;
+}
+
+.dark .code-highlight .token.function,
+.dark .code-highlight .token.function-name,
+.dark .code-highlight .token.method {
+    color: #93c5fd;
+}
+
+.dark .code-highlight .token.number {
+    color: #fcd34d;
+}
+
+.dark .code-highlight .token.property,
+.dark .code-highlight .token.variable,
+.dark .code-highlight .token.parameter,
+.dark .code-highlight .token.class-name {
+    color: #67e8f9;
+}

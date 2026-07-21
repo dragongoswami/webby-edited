@@ -1,0 +1,17 @@
+{
+    "name": "Web Agent",
+    "slug": "webagent",
+    "description": "Enables the AI builder to fetch web content, browse pages, and scrape data using HTTP, headless browser, or Firecrawl",
+    "version": "1.0.0",
+    "author": "Titan Systems",
+    "author_url": "https://titansys.dev",
+    "type": "builder_capability",
+    "icon": "Globe",
+    "main_class": "src/WebAgentPlugin.php",
+    "namespace": "App\\Plugins\\BuilderCapabilities\\WebAgentPlugin",
+    "requirements": {
+        "php": ">=8.2",
+        "laravel": ">=11.0"
+    },
+    "migrations": []
+}

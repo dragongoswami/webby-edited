@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warm Canvas Studio - Design Preview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #E85D3B;
+            --color-primary-hover: #D14D2C;
+            --color-bg: #FFFDF8;
+            --color-surface: #FFFFFF;
+            --color-border: #E8E4DC;
+            --color-text: #1C1C1C;
+            --color-text-secondary: #6B6560;
+            --font-body: 'Inter', -apple-system, sans-serif;
+            --font-display: 'Fraunces', Georgia, serif;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: var(--font-body);
+            background: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.7;
+            padding: 2rem;
+            font-weight: 400;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        header {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+        }
+        .tagline {
+            color: var(--color-primary);
+            font-size: 1.125rem;
+            margin-bottom: 3rem;
+        }
+        .section { margin-bottom: 3rem; }
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .colors { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .color-swatch {
+            width: 100px;
+            height: 80px;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-end;
+            padding: 0.5rem;
+            font-size: 0.625rem;
+            font-weight: 500;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            margin-right: 0.75rem;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary {
+            background: var(--color-primary);
+            color: white;
+        }
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--color-border);
+            color: var(--color-text);
+        }
+        .card {
+            background: var(--color-surface);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.5rem; }
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--color-border);
+            color: var(--color-text-secondary);
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Warm Canvas Studio</header>
+        <p class="tagline">Warm minimalism with editorial sophistication</p>
+
+        <div class="section">
+            <h2 class="section-title">Color Palette</h2>
+            <div class="colors">
+                <div class="color-swatch" style="background: #E85D3B; color: white;">#E85D3B<br>Primary</div>
+                <div class="color-swatch" style="background: #FFFDF8; border: 1px solid #E8E4DC;">#FFFDF8<br>Background</div>
+                <div class="color-swatch" style="background: #FFFFFF; border: 1px solid #E8E4DC;">#FFFFFF<br>Surface</div>
+                <div class="color-swatch" style="background: #1C1C1C; color: white;">#1C1C1C<br>Text</div>
+                <div class="color-swatch" style="background: #6B6560; color: white;">#6B6560<br>Secondary</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Buttons</h2>
+            <button class="btn btn-primary">Get Started</button>
+            <button class="btn btn-outline">Learn More</button>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Cards</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Card Title</h3>
+                    <p style="color: var(--color-text-secondary); font-size: 0.875rem;">Warm minimalism with serif headlines.</p>
+                </div>
+                <div class="card">
+                    <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Another Card</h3>
+                    <p style="color: var(--color-text-secondary); font-size: 0.875rem;">Editorial sophistication meets workspace.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Warm Canvas Studio Design System &middot; Calm, focused, warm</p>
+        </footer>
+    </div>
+</body>
+</html>

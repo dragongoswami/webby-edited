@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terracotta Editor - Design Preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #C75D3A;
+            --color-primary-hover: #B54D2C;
+            --color-primary-light: rgba(199, 93, 58, 0.1);
+            --color-bg: #FAFAF8;
+            --color-surface: #FFFFFF;
+            --color-border: #E8E6E3;
+            --color-text: #1A1A1A;
+            --color-text-secondary: #6B6B6B;
+            --color-text-muted: #9B9B9B;
+            --font-body: 'Inter', -apple-system, sans-serif;
+            --font-display: 'Fraunces', Georgia, serif;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: var(--font-body);
+            background: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        header {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            color: var(--color-text);
+        }
+        .tagline {
+            color: var(--color-primary);
+            font-size: 1.25rem;
+            margin-bottom: 3rem;
+        }
+        .section { margin-bottom: 3rem; }
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--color-text);
+        }
+        .colors {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 1rem;
+        }
+        .color-swatch {
+            aspect-ratio: 1;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-end;
+            padding: 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        .color-swatch.dark { color: white; }
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            margin-right: 0.75rem;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary {
+            background: var(--color-primary);
+            color: white;
+        }
+        .btn-primary:hover {
+            background: var(--color-primary-hover);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--color-border);
+            color: var(--color-text);
+        }
+        .btn-outline:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+        }
+        .card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .input {
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: var(--font-body);
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        .input:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px var(--color-primary-light);
+        }
+        .typo-grid {
+            display: grid;
+            gap: 1rem;
+        }
+        .typo-item { font-size: 2rem; font-family: var(--font-display); }
+        .typo-item.sm { font-size: 1.5rem; }
+        .typo-item.xs { font-size: 1rem; font-family: var(--font-body); }
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--color-border);
+            color: var(--color-text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Terracotta Editor</header>
+        <p class="tagline">Warm terracotta accent meets clean editorial layout</p>
+
+        <div class="section">
+            <h2 class="section-title">Color Palette</h2>
+            <div class="colors">
+                <div class="color-swatch" style="background: #C75D3A; color: white;">#C75D3A<br>Primary</div>
+                <div class="color-swatch" style="background: #B54D2C; color: white;">#B54D2C<br>Primary Hover</div>
+                <div class="color-swatch" style="background: #FAFAF8; border: 1px solid #E8E6E3;">#FAFAF8<br>Background</div>
+                <div class="color-swatch" style="background: #FFFFFF; border: 1px solid #E8E6E3;">#FFFFFF<br>Surface</div>
+                <div class="color-swatch dark" style="background: #1A1A1A;">#1A1A1A<br>Text</div>
+                <div class="color-swatch" style="background: #6B6B6B; color: white;">#6B6B6B<br>Secondary</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Buttons</h2>
+            <div class="card">
+                <button class="btn btn-primary">Primary Button</button>
+                <button class="btn btn-outline">Outline Button</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Cards</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Card Title</h3>
+                    <p style="color: var(--color-text-secondary); font-size: 0.875rem;">Card content goes here with a warm terracotta accent for emphasis.</p>
+                </div>
+                <div class="card">
+                    <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Another Card</h3>
+                    <p style="color: var(--color-text-secondary); font-size: 0.875rem;">Clean whitespace and soft shadows create depth.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Input Fields</h2>
+            <div class="card" style="max-width: 400px;">
+                <input type="text" class="input" placeholder="Enter your text...">
+                <input type="text" class="input" placeholder="Focused state" style="border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(199, 93, 58, 0.1);">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Typography</h2>
+            <div class="typo-grid">
+                <div class="typo-item">Display Heading - Fraunces</div>
+                <div class="typo-item sm">Section Title - Fraunces</div>
+                <div class="typo-item xs">Body text - Inter 16px/1.6</div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Terracotta Editor Design System &middot; Warm, inviting, editor-focused</p>
+        </footer>
+    </div>
+</body>
+</html>

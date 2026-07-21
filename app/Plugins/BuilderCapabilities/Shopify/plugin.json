@@ -1,0 +1,17 @@
+{
+    "name": "Shopify",
+    "slug": "shopify",
+    "description": "Generate Shopify OS 2.0 themes and connect to stores for auto-push",
+    "version": "1.0.0",
+    "author": "Titan Systems",
+    "author_url": "https://titansys.dev",
+    "type": "builder_capability",
+    "icon": "ShoppingBag",
+    "main_class": "src/ShopifyPlugin.php",
+    "namespace": "App\\Plugins\\BuilderCapabilities\\ShopifyPlugin",
+    "requirements": {
+        "php": ">=8.2",
+        "laravel": ">=11.0"
+    },
+    "migrations": []
+}

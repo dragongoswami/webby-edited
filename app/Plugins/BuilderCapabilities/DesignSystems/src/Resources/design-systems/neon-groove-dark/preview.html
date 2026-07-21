@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Groove Dark - Design Preview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #1DB954;
+            --color-primary-hover: #1ED760;
+            --color-bg: #121212;
+            --color-surface: #181818;
+            --color-surface-hover: #282828;
+            --color-border: #282828;
+            --color-text: #FFFFFF;
+            --color-text-secondary: #B3B3B3;
+            --font-sans: 'Inter', -apple-system, sans-serif;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: var(--font-sans);
+            background: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.5;
+            padding: 2rem;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        header {
+            font-size: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 1rem;
+            color: var(--color-text);
+        }
+        .tagline {
+            color: var(--color-primary);
+            font-size: 1.125rem;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .section { margin-bottom: 3rem; }
+        .section-title {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-text-secondary);
+            margin-bottom: 1rem;
+        }
+        .colors { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .color-swatch {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-end;
+            padding: 0.5rem;
+            font-size: 0.625rem;
+            font-weight: 500;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+            margin-right: 0.75rem;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary {
+            background: var(--color-primary);
+            color: black;
+        }
+        .btn-primary:hover {
+            background: var(--color-primary-hover);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--color-border);
+            color: var(--color-text);
+        }
+        .btn-outline:hover {
+            border-color: var(--color-text);
+        }
+        .card {
+            background: var(--color-surface);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: background 0.2s ease;
+        }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--color-border);
+            color: var(--color-text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Neon Groove Dark</header>
+        <p class="tagline">Vibrant green on dark, bold type</p>
+
+        <div class="section">
+            <h2 class="section-title">Color Palette</h2>
+            <div class="colors">
+                <div class="color-swatch" style="background: #1DB954; color: black; font-weight: bold;">#1DB954<br>Primary</div>
+                <div class="color-swatch" style="background: #1ED760; color: black;">#1ED760<br>Hover</div>
+                <div class="color-swatch" style="background: #121212;">#121212<br>Background</div>
+                <div class="color-swatch" style="background: #181818;">#181818<br>Surface</div>
+                <div class="color-swatch" style="background: #282828;">#282828<br>Surface Hover</div>
+                <div class="color-swatch" style="background: #B3B3B3; color: black;">#B3B3B3<br>Secondary</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Buttons</h2>
+            <button class="btn btn-primary">Get Started</button>
+            <button class="btn btn-outline">Learn More</button>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Cards</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3 style="font-weight: 700; margin-bottom: 0.5rem;">Card Title</h3>
+                    <p style="color: var(--color-text-secondary); font-size: 0.875rem;">Dark surfaces with rounded corners and hover states.</p>
+                </div>
+                <div class="card">
+                    <h3 style="font-weight: 700; margin-bottom: 0.5rem;">Another Card</h3>
+                    <p style="color: var(--color-text-secondary); font-size: 0.875rem;">Spotify-inspired design language.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Neon Groove Dark Design System &middot; Energetic, modern, music-forward</p>
+        </footer>
+    </div>
+</body>
+</html>

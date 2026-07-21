@@ -1,0 +1,17 @@
+{
+    "name": "Design Systems",
+    "slug": "design-systems",
+    "description": "Import and apply pre-built design systems to your AI-generated websites",
+    "version": "1.0.0",
+    "author": "Titan Systems",
+    "author_url": "https://titansys.dev",
+    "type": "builder_capability",
+    "icon": "Palette",
+    "main_class": "src/DesignSystemsPlugin.php",
+    "namespace": "App\\Plugins\\BuilderCapabilities\\DesignSystems",
+    "requirements": {
+        "php": ">=8.2",
+        "laravel": ">=11.0"
+    },
+    "migrations": []
+}

@@ -1,0 +1,36 @@
+{
+    "suggestions": {
+        "1": "Xây dựng ứng dụng quản lý công việc",
+        "2": "Tạo trang web portfolio",
+        "3": "Thiết kế trang đích",
+        "4": "Tạo cửa hàng thương mại điện tử"
+    },
+    "typing_prompts": {
+        "1": "Xây dựng cho tôi một trang web portfolio hiện đại với chế độ tối...",
+        "2": "Tạo ứng dụng quản lý công việc với tính năng kéo thả...",
+        "3": "Thiết kế trang đích cho startup SaaS của tôi...",
+        "4": "Tạo cửa hàng thương mại điện tử với chức năng giỏ hàng...",
+        "5": "Xây dựng nền tảng blog hỗ trợ định dạng markdown...",
+        "6": "Tạo bảng điều khiển theo dõi phân tích...",
+        "7": "Thiết kế hệ thống đặt lịch hẹn...",
+        "8": "Xây dựng bảng tin mạng xã hội với cuộn vô hạn..."
+    },
+    "greetings": {
+        "1": "Bạn muốn xây dựng gì, {name}?",
+        "2": "Chúng ta nên xây dựng gì, {name}?",
+        "3": "Bạn muốn tạo gì, {name}?",
+        "4": "Tôi có thể giúp bạn xây dựng gì, {name}?"
+    },
+    "hero_headlines": {
+        "1": "Hôm nay bạn sẽ xây dựng gì?",
+        "2": "Hôm nay bạn sẽ tạo gì?",
+        "3": "Xây dựng điều gì đó tuyệt vời hôm nay",
+        "4": "Biến ý tưởng của bạn thành hiện thực"
+    },
+    "hero_subtitles": {
+        "1": "Tạo ra những trang web ấn tượng bằng cách trò chuyện với AI.",
+        "2": "Biến ý tưởng của bạn thành trang web với AI.",
+        "3": "Xây dựng trang web đẹp thông qua trò chuyện.",
+        "4": "Mô tả tầm nhìn của bạn và xem nó hiện thực hóa."
+    }
+}

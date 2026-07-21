@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purple Gradient Elite - Design Preview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #635BFF;
+            --color-primary-light: #858AFE;
+            --color-accent: #0084FF;
+            --color-bg: #FFFFFF;
+            --color-surface: #F6F9FC;
+            --color-text: #1A1A1A;
+            --color-text-secondary: #6B778C;
+            --color-border: #E6E8EB;
+            --gradient-primary: linear-gradient(135deg, #635BFF 0%, #0084FF 100%);
+            --font-sans: 'Inter', -apple-system, sans-serif;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: var(--font-sans);
+            background: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+            padding: 2rem;
+            font-weight: 300;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        header {
+            font-size: 3.5rem;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .tagline {
+            color: var(--color-text-secondary);
+            font-size: 1.25rem;
+            font-weight: 300;
+            margin-bottom: 3rem;
+        }
+        .section { margin-bottom: 3rem; }
+        .section-title {
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-text-secondary);
+            margin-bottom: 1rem;
+        }
+        .colors { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .color-swatch {
+            width: 100px;
+            height: 80px;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-end;
+            padding: 0.5rem;
+            font-size: 0.625rem;
+            font-weight: 500;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            border-radius: 100px;
+            font-weight: 500;
+            font-size: 1rem;
+            text-decoration: none;
+            margin-right: 0.75rem;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: 0 4px 14px rgba(99, 91, 255, 0.3);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--color-border);
+            color: var(--color-text);
+        }
+        .card {
+            background: var(--color-surface);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid var(--color-border);
+        }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.5rem; }
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--color-border);
+            color: var(--color-text-secondary);
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Purple Gradient Elite</header>
+        <p class="tagline">Signature purple gradients with weight-300 elegance</p>
+
+        <div class="section">
+            <h2 class="section-title">Color Palette</h2>
+            <div class="colors">
+                <div class="color-swatch" style="background: linear-gradient(135deg, #635BFF, #0084FF); color: white;">#635BFF<br>→#0084FF</div>
+                <div class="color-swatch" style="background: #858AFE; color: white;">#858AFE<br>Light</div>
+                <div class="color-swatch" style="background: #F6F9FC; border: 1px solid #E6E8EB;">#F6F9FC<br>Surface</div>
+                <div class="color-swatch" style="background: #1A1A1A; color: white;">#1A1A1A<br>Text</div>
+                <div class="color-swatch" style="background: #6B778C; color: white;">#6B778C<br>Secondary</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Buttons</h2>
+            <button class="btn btn-primary">Get Started</button>
+            <button class="btn btn-outline">Learn More</button>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Cards</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3 style="font-weight: 500; margin-bottom: 0.5rem;">Card Title</h3>
+                    <p style="color: var(--color-text-secondary); font-size: 0.875rem;">Gradient accents and light typography.</p>
+                </div>
+                <div class="card">
+                    <h3 style="font-weight: 500; margin-bottom: 0.5rem;">Another Card</h3>
+                    <p style="color: var(--color-text-secondary); font-size: 0.875rem;">Stripe-inspired fintech aesthetic.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Purple Gradient Elite Design System &middot; Sophisticated, trustworthy, premium</p>
+        </footer>
+    </div>
+</body>
+</html>

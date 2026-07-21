@@ -1,0 +1,36 @@
+{
+    "suggestions": {
+        "1": "Crear una app de gestión de tareas",
+        "2": "Construir un sitio web de portafolio",
+        "3": "Diseñar una página de aterrizaje",
+        "4": "Hacer una tienda de comercio electrónico"
+    },
+    "typing_prompts": {
+        "1": "Construye un portafolio moderno con modo oscuro...",
+        "2": "Crea una app de gestión de tareas con arrastrar y soltar...",
+        "3": "Diseña una página de aterrizaje para mi startup SaaS...",
+        "4": "Haz una tienda en línea con carrito de compras...",
+        "5": "Construye una plataforma de blog con soporte Markdown...",
+        "6": "Crea un panel de control para seguimiento de analíticas...",
+        "7": "Diseña un sistema de reservas para citas...",
+        "8": "Construye un feed de redes sociales con scroll infinito..."
+    },
+    "greetings": {
+        "1": "¿Qué quieres construir, {name}?",
+        "2": "¿Qué deberíamos construir, {name}?",
+        "3": "¿Qué te gustaría crear, {name}?",
+        "4": "¿En qué puedo ayudarte a construir, {name}?"
+    },
+    "hero_headlines": {
+        "1": "¿Qué construirás hoy?",
+        "2": "¿Qué crearás hoy?",
+        "3": "Construye algo increíble hoy",
+        "4": "Convierte tus ideas en realidad"
+    },
+    "hero_subtitles": {
+        "1": "Crea sitios web impresionantes conversando con IA.",
+        "2": "Transforma tus ideas en sitios web con IA.",
+        "3": "Construye sitios web hermosos a través de la conversación.",
+        "4": "Describe tu visión y mírala cobrar vida."
+    }
+}
