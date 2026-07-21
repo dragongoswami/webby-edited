@@ -1,25 +1,10 @@
-FROM php:8.4-cli
+FROM dunglas/frankenphp:php8.4-bookworm
 
-RUN apt-get update && apt-get install -y \
-    libpng-dev \
-    libjpeg-dev \
-    libfreetype6-dev \
-    libzip-dev \
-    libpq-dev \
-    git \
-    unzip \
-    curl \
-    nodejs \
-    npm \
-    && rm -rf /var/lib/apt/lists/*
-
-RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install bcmath gd zip pdo_mysql
+RUN install-php-extensions bcmath gd zip pdo_mysql
 
 COPY . /app
 WORKDIR /app
 
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN composer install --ignore-platform-reqs --no-scripts --no-interaction
 RUN npm install
 RUN npm run build
@@ -27,6 +12,22 @@ RUN npm run build
 RUN mkdir -p storage/framework/{sessions,views,cache,testing} storage/logs bootstrap/cache
 RUN chmod -R a+rw storage bootstrap/cache
 
-EXPOSE 8080
+CADDYFILE_APACHE_CONVERTED=<<EOF
+{
+    admin off
+    auto_https off
+    https_port 8080
+}
 
-CMD ["php", "-S", "0.0.0.0:8080", "-t", "public"]
+:8080 {
+    root * /app/public
+    php
+    handle_errors {
+        respond "Error {err.status_code}"
+    }
+}
+EOF
+
+RUN echo "$CADDYFILE_APACHE_CONVERTED" > /etc/caddy/Caddyfile
+
+CMD ["frankenphp", "run", "--config", "/etc/caddy/Caddyfile"]
