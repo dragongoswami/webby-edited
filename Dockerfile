@@ -21,10 +21,12 @@ WORKDIR /app
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN composer install --ignore-platform-reqs --no-scripts --no-interaction
+RUN npm install
+RUN npm run build
 
 RUN mkdir -p storage/framework/{sessions,views,cache,testing} storage/logs bootstrap/cache
 RUN chmod -R a+rw storage bootstrap/cache
 
 EXPOSE 8080
 
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8080"]
+CMD ["php", "-S", "0.0.0.0:8080", "-t", "public"]
