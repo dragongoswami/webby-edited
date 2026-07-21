@@ -1,6 +1,9 @@
 FROM php:8.4-cli
 
 RUN apt-get update && apt-get install -y \
+    libpng-dev \
+    libjpeg-dev \
+    libfreetype6-dev \
     libzip-dev \
     libpq-dev \
     git \
@@ -10,7 +13,8 @@ RUN apt-get update && apt-get install -y \
     npm \
     && rm -rf /var/lib/apt/lists/*
 
-RUN docker-php-ext-install bcmath gd zip pdo_mysql
+RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install bcmath gd zip pdo_mysql
 
 COPY . /app
 WORKDIR /app
