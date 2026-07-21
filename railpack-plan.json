@@ -1,5 +1,7 @@
 {
   "build": {
-    "composerCommand": "composer install --ignore-platform-reqs --optimize-autoloader --no-scripts --no-interaction"
+    "composerCommand": "composer install --ignore-platform-reqs --optimize-autoloader --no-scripts --no-interaction",
+    "aptInstall": ["libzip-dev", "libpq-dev"],
+    "phpExtensions": ["bcmath", "gd", "zip", "pdo_mysql"]
   }
 }
