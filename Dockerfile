@@ -12,22 +12,6 @@ RUN npm run build
 RUN mkdir -p storage/framework/{sessions,views,cache,testing} storage/logs bootstrap/cache
 RUN chmod -R a+rw storage bootstrap/cache
 
-CADDYFILE_APACHE_CONVERTED=<<EOF
-{
-    admin off
-    auto_https off
-    https_port 8080
-}
+EXPOSE 8080
 
-:8080 {
-    root * /app/public
-    php
-    handle_errors {
-        respond "Error {err.status_code}"
-    }
-}
-EOF
-
-RUN echo "$CADDYFILE_APACHE_CONVERTED" > /etc/caddy/Caddyfile
-
-CMD ["frankenphp", "run", "--config", "/etc/caddy/Caddyfile"]
+CMD ["frankenphp", "run", "--port", "8080", "--root", "/app/public"]
